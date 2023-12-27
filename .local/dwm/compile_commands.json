@@ -1,0 +1,65 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-std=c99",
+      "-pedantic",
+      "-Wall",
+      "-Wno-deprecated-declarations",
+      "-Os",
+      "-I/usr/X11R6/include",
+      "-I/usr/include/freetype2",
+      "-D_DEFAULT_SOURCE",
+      "-D_BSD_SOURCE",
+      "-D_XOPEN_SOURCE=700L",
+      "-DVERSION=\"6.4\"",
+      "-DXINERAMA",
+      "drw.c"
+    ],
+    "directory": "/home/mumk/.local/dwm",
+    "file": "/home/mumk/.local/dwm/drw.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-std=c99",
+      "-pedantic",
+      "-Wall",
+      "-Wno-deprecated-declarations",
+      "-Os",
+      "-I/usr/X11R6/include",
+      "-I/usr/include/freetype2",
+      "-D_DEFAULT_SOURCE",
+      "-D_BSD_SOURCE",
+      "-D_XOPEN_SOURCE=700L",
+      "-DVERSION=\"6.4\"",
+      "-DXINERAMA",
+      "dwm.c"
+    ],
+    "directory": "/home/mumk/.local/dwm",
+    "file": "/home/mumk/.local/dwm/dwm.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/cc",
+      "-c",
+      "-std=c99",
+      "-pedantic",
+      "-Wall",
+      "-Wno-deprecated-declarations",
+      "-Os",
+      "-I/usr/X11R6/include",
+      "-I/usr/include/freetype2",
+      "-D_DEFAULT_SOURCE",
+      "-D_BSD_SOURCE",
+      "-D_XOPEN_SOURCE=700L",
+      "-DVERSION=\"6.4\"",
+      "-DXINERAMA",
+      "util.c"
+    ],
+    "directory": "/home/mumk/.local/dwm",
+    "file": "/home/mumk/.local/dwm/util.c"
+  }
+]
