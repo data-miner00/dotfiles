@@ -18,6 +18,9 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias nv='nvim'
 
+# Move all files and folders in the current directory to parent directory
+alias hoist='find . -maxdepth 1 -exec mv {} .. \;'
+
 # Git bare repository to manage dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 
@@ -25,3 +28,8 @@ function mkcd() {
     mkdir -p -- "$1" &&
     cd -P -- "$1"
 }
+
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
