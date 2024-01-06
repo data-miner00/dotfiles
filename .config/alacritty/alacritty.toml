@@ -1,0 +1,17 @@
+[colors.primary]
+background = "#333333"
+
+[font.bold]
+family = "FiraMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "FreeMono"
+style = "Oblique"
+
+[font.normal]
+family = "FiraMono Nerd Font"
+style = "Medium"
+
+[window]
+opacity = 0.6
