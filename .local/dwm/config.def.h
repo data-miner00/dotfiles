@@ -1,5 +1,5 @@
 /* See LICENSE file for copyright and license details. */
-
+#include <X11/XF86keysym.h>
 #include "./themes/mine.h"
 #define PrintScreenDWM 0x0000ff61
 
@@ -59,14 +59,23 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_norm_bg, "-nf", col_norm_fg, "-sb", col_sel_bg, "-sf", col_sel_fg, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 
-static const char *rofi[] = { "rofi", "-show", "drun", "-show-emojis", NULL};
+static const char *rofi[] = { "rofi", "-show", "drun", "-show-emojis", NULL };
 static const char *screenshot[] = { "screenshot", NULL };
+
+// From: https://megamorf.gitlab.io/2018/12/16/set-audio-volume-from-command-line/
+static const char *volume_up[] = { "pactl", "--", "set-sink-volume", "0", "+10%", NULL };
+
+static const char *volume_down[] = { "pactl", "--", "set-sink-volume", "0", "-10%", NULL };
+static const char *volume_mute[] = { "pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = rofi } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-  { 0,                            PrintScreenDWM, spawn,     {.v = screenshot } },
+	{ 0,                            PrintScreenDWM, spawn,     {.v = screenshot } },
+	{ 0,                            XF86XK_AudioMute, spawn, {.v = volume_mute } },
+	{ 0,                            XF86XK_AudioLowerVolume, spawn, {.v = volume_down } },
+	{ 0,                            XF86XK_AudioRaiseVolume, spawn, {.v = volume_up } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
