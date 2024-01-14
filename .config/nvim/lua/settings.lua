@@ -19,3 +19,4 @@ vim.opt.smartcase = true
 
 vim.opt.termguicolors = true
 vim.opt.scrolloff = 2
+vim.opt.wrap = false

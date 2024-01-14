@@ -75,3 +75,7 @@ vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 -- Random
 vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<cr>")
+
+-- Horizontal navigation
+vim.keymap.set('n', '<c-s-h>', '20zh')
+vim.keymap.set('n', '<c-s-l>', '20zl')
