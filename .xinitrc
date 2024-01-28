@@ -11,4 +11,5 @@ fcitx5 &
 /usr/bin/pipewire-media-session &
 dwmblocks &
 picom &
+dunst &
 exec dwm
