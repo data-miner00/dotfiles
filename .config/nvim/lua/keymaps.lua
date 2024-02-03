@@ -16,7 +16,7 @@ vim.keymap.set('n', 'N', 'Nzz')
 
 -- Half page move
 vim.keymap.set('n', '<C-d>', '<C-d>zz')
-vim.keymap.set('n', '<C-u>', '<C-d>zz')
+vim.keymap.set('n', '<C-u>', '<C-u>zz')
 
 -- Clipboard I/O
 vim.keymap.set({ 'n', 'x', 'v' }, '<leader>y', '"+y')
