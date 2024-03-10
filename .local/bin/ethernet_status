@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+eth_state=$(cat /sys/class/net/eno1/operstate)
+echo "$eth_state"
+
