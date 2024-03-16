@@ -1,4 +1,4 @@
-feh --bg-scale Downloads/Wallpapers/366639.jpg
+./.fehbg
 
 # 드디어 한글은 입력할 수 있어요
 export GTK_IM_MODULE=fcitx

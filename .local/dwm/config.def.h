@@ -1,6 +1,6 @@
 /* See LICENSE file for copyright and license details. */
 #include <X11/XF86keysym.h>
-#include "./themes/mine.h"
+#include "./themes/angelina.h"
 #define PrintScreenDWM 0x0000ff61
 
 /* appearance */
