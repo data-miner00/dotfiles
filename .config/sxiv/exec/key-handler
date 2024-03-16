@@ -1,0 +1,30 @@
+#!/bin/sh
+#
+
+DEFAULT_ICON="$HOME/.local/share/icons/fontawesome/bell.png" 
+
+while read file
+do
+    fullpath="$(pwd)/$file"
+    case "$1" in
+    "C-t")
+        mv "$file" ~/.trash ;;
+    "C-r")
+        convert -rotate 90 "$file" "$file" ;;
+    "C-c")
+        echo -n "$file" | xclip -selection clipboard &&
+        notify-send -i $DEFAULT_ICON "$file copied to clipboard" & ;;
+    "C-w")
+        feh --bg-scale "$file" &&
+        notify-send -i $DEFAULT_ICON "Wallpaper updated." & ;;
+    "C-y")
+        echo -n "$fullpath" | xclip -selection clipboard &&
+        notify-send -i $DEFAULT_ICON "$fullpath copied to clipboard" & ;;
+    "C-d")
+        [ "$(printf "No\\nYes" | rofi -p "Delete file?")" = "Yes" ] &&
+        rm "$file" &&
+        notify-send -i $DEFAULT_ICON "$file has been deleted." & ;;
+    *)
+        notify-send -i $DEFAULT_ICON "Unknown selection: $1" & ;;
+    esac
+done
