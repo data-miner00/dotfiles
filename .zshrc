@@ -17,6 +17,9 @@ PROMPT="%n@%F{225}%m %F{195}%~%F{white}%# "
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias nv='nvim'
+alias ted='cd ~/Workspace/ted-tarik'
+alias nvconf='cd ~/.config/nvim'
+alias img='sxiv'
 
 # Move all files and folders in the current directory to parent directory
 alias hoist='find . -maxdepth 1 -exec mv {} .. \;'
@@ -52,3 +55,15 @@ PATH="$BUN_INSTALL/bin:$PATH"
 
 export PATH="$HOME/.local/bin:$PATH"
 
+
+[ -f "/home/mumk/.ghcup/env" ] && source "/home/mumk/.ghcup/env" # ghcup-env
+
+# pnpm
+export PNPM_HOME="/home/mumk/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+export PATH="$HOME/.nix-profile/bin:$PATH"

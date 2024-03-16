@@ -22,7 +22,8 @@ local servers = {
   'fortls',
   'vimls',
   'html',
-  'perlnavigator'
+  'perlnavigator',
+  'nil_ls'
 }
 
 for _, lsp in ipairs(servers) do
