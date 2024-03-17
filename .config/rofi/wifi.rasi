@@ -1,0 +1,12 @@
+configuration {
+  show-icons: false;
+}
+
+inputbar {
+  children: [entry];
+}
+
+listview {
+  lines: 6;
+}
+
