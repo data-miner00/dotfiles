@@ -1,0 +1,38 @@
+#!/bin/sh
+
+# Increment, decrement, or mute the volume using Pipewire and send a notification
+
+case $1 in
+	up)
+		# Set the volume on (if it was muted)
+    pactl set-sink-mute @DEFAULT_SINK@ 0
+    pactl set-sink-volume @DEFAULT_SINK@ +5%
+		;;
+	down)
+    pactl set-sink-mute @DEFAULT_SINK@ 0
+    pactl set-sink-volume @DEFAULT_SINK@ -5%
+		;;
+	mute)
+    pactl set-sink-mute @DEFAULT_SINK@ toggle
+		;;
+esac
+
+VOLUME=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -oE '[0-9]{1,3}%' | head -n 1 | sed 's/%//')
+
+
+send_notification() {
+	if [ "$1" = "mute" ]; then ICON="mute"; elif [ "$VOLUME" -lt 33 ]; then ICON="low"; elif [ "$VOLUME" -lt 66 ]; then ICON="medium"; else ICON="high"; fi
+	if [ "$1" = "mute" ]; then TEXT="Currently muted"; else TEXT="Currently at ${VOLUME}%"; fi
+
+	dunstify -a "Volume" -r 9993 -h int:value:"$VOLUME" -i "volume-$ICON" "Volume" "$TEXT" -t 2000
+}
+
+case $1 in
+	mute)
+		case "$(pactl get-sink-mute @DEFAULT_SINK@)" in
+			*yes* ) send_notification mute;;
+			*       ) send_notification;;
+		esac;;
+	*)
+		send_notification;;
+esac
