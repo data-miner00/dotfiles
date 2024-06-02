@@ -79,3 +79,8 @@ vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<cr>")
 -- Horizontal navigation
 vim.keymap.set('n', '<c-s-h>', '20zh')
 vim.keymap.set('n', '<c-s-l>', '20zl')
+
+-- Terminal operation
+vim.keymap.set('n', '<c-o><c-t>', ':terminal<cr>')
+vim.keymap.set('t', '<c-w>h', '<c-\\><c-n>', { silent = true })
+vim.keymap.set('t', '<esc>', '<c-\\><c-n>')
