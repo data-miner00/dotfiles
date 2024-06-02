@@ -217,7 +217,7 @@
     max_icon_size = 32
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
-    icon_path = /home/mumk/.local/share/icons/fontawesome/
+    icon_path = $HOME/.local/share/icons/dunst/
 
     ### History ###
 
@@ -316,24 +316,26 @@
     background = "#222222"
     foreground = "#888888"
     timeout = 10
-    # Icon for notifications with low urgency, uncomment to enable
-    #default_icon = /path/to/icon
+    default_icon = $HOME/.local/share/icons/dunst/bell.svg
 
 [urgency_normal]
-    background = "#E6E9F1"
-    foreground = "#555555"
-    frame_color = "#E2D3E4"
+    background = "#285081"
+    foreground = "#EEEEEE"
+    frame_color = "#3063A1"
     timeout = 10
-    # Icon for notifications with normal urgency, uncomment to enable
-    #default_icon = bell
+    default_icon = $HOME/.local/share/icons/dunst/bell.svg
 
 [urgency_critical]
     background = "#A6BED5"
     foreground = "#222222"
     frame_color = "#899CB6"
     timeout = 0
-    # Icon for notifications with critical urgency, uncomment to enable
-    #default_icon = bell
+    default_icon = $HOME/.local/share/icons/dunst/exclamation.svg
+
+
+[volume]
+    appname = "Volume"
+    highlight = "#cba6f7"
 
 # Every section that isn't one of the above is interpreted as a rules to
 # override settings for certain messages.
