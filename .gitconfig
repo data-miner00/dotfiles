@@ -3,3 +3,5 @@
 	email = pkay_@live.com
 [credential]
 	helper = cache
+[init]
+	defaultBranch = master
