@@ -17,6 +17,9 @@ case $1 in
 		;;
 esac
 
+# Update dwmblocks volume
+kill -44 $(pidof dwmblocks)
+
 VOLUME=$(pactl get-sink-volume @DEFAULT_SINK@ | grep -oE '[0-9]{1,3}%' | head -n 1 | sed 's/%//')
 ICON_PATH=$HOME/.local/share/icons/dunst
 
