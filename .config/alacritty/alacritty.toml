@@ -1,5 +1,6 @@
 [colors.primary]
-background = "#333333"
+background = "#11121D"
+foreground = "#A9B1D6"
 
 [font.bold]
 family = "FiraMono Nerd Font"
@@ -14,4 +15,28 @@ family = "FiraMono Nerd Font"
 style = "Medium"
 
 [window]
-opacity = 0.6
+opacity = 0.8
+
+[window.padding]
+x = 0
+y = 0
+
+[window.class]
+instance = "Alacritty"
+general = "Alacritty"
+
+[scrolling]
+history = 10_000
+multiplier = 3
+
+[cursor.style]
+shape = "Block"
+blinking = "On"
+
+[cursor]
+blink_interval = 500
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Super|Shift"
+action = "SpawnNewInstance"
