@@ -67,3 +67,5 @@ esac
 # pnpm end
 
 export PATH="$HOME/.nix-profile/bin:$PATH"
+
+neofetch
