@@ -165,6 +165,14 @@ vnoremap <c-_> :s/^/"/<cr>
 vnoremap <c-_> :norm i"<cr>
 vnoremap <c-x> :norm x<cr>
 
+" Search
+noremap ;; :%s:::g<Left><Left><Left>
+noremap ;' :%s:::gc<Left><Left><Left><Left>
+" Select previously pasted text
+nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
+
+au FileType html,vim,xhtml,xml inoremap < <lt>><ESC>i| inoremap > <c-r>=ClosePair('>')<CR>
+
 " }}}
 
 " WILDMENU ---------------------------------------------------------------- {{{
