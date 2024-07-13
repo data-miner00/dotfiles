@@ -20,6 +20,7 @@ alias nv='nvim'
 alias ted='cd ~/Workspace/ted-tarik'
 alias nvconf='cd ~/.config/nvim'
 alias img='sxiv'
+alias tty='tty-clock -c -C 4'
 
 # Move all files and folders in the current directory to parent directory
 alias hoist='find . -maxdepth 1 -exec mv {} .. \;'
