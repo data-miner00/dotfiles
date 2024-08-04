@@ -168,8 +168,15 @@ vnoremap <c-x> :norm x<cr>
 " Search
 noremap ;; :%s:::g<Left><Left><Left>
 noremap ;' :%s:::gc<Left><Left><Left><Left>
+
 " Select previously pasted text
 nnoremap <expr> gp '`[' . strpart(getregtype(), 0, 1) . '`]'
+
+" Disable arrow keys
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+nnoremap <up> <nop>
+nnoremap <down> <nop>
 
 au FileType html,vim,xhtml,xml inoremap < <lt>><ESC>i| inoremap > <c-r>=ClosePair('>')<CR>
 

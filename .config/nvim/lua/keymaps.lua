@@ -90,3 +90,10 @@ vim.keymap.set('n', '<c-s-l>', '20zl')
 vim.keymap.set('n', '<c-o><c-t>', ':terminal<cr>', { desc = "[P]Open inline terminal" })
 vim.keymap.set('t', '<c-w>h', '<c-\\><c-n>', { silent = true })
 vim.keymap.set('t', '<esc>', '<c-\\><c-n>', { desc = "[P]Return terminal into normal mode" })
+
+-- Disable Arrow keys
+vim.keymap.set('n', '<left>', '<nop>')
+vim.keymap.set('n', '<right>', '<nop>')
+vim.keymap.set('n', '<up>', '<nop>')
+vim.keymap.set('n', '<down>', '<nop>')
+
