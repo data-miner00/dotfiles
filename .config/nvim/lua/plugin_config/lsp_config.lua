@@ -13,6 +13,8 @@ end
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 local servers = {
+  'dhall_lsp_server',
+  'clojure_lsp',
   'lua_ls',
   'hls',
   'rust_analyzer',
@@ -21,7 +23,7 @@ local servers = {
   'tsserver',
   'fortls',
   'vimls',
-  'html',
+  -- 'html',
   'perlnavigator',
   'nil_ls'
 }

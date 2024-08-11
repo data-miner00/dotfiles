@@ -178,6 +178,9 @@ nnoremap <right> <nop>
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 
+" Print date
+nnoremap <leader>d :.!date<cr>
+
 au FileType html,vim,xhtml,xml inoremap < <lt>><ESC>i| inoremap > <c-r>=ClosePair('>')<CR>
 
 " }}}

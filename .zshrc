@@ -23,6 +23,8 @@ alias img='sxiv'
 alias tty='tty-clock -c -C 4'
 alias start='sudo pacman -Syu --noconfirm && startx'
 alias quote='curl https://api.quotable.io/random -s | jq  ".content" | cowsay | lolcat'
+alias :q='exit'
+alias fc='ls -l | wc -l'
 
 # Move all files and folders in the current directory to parent directory
 alias hoist='find . -maxdepth 1 -exec mv {} .. \;'
