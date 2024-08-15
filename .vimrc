@@ -63,8 +63,8 @@ set history=40
 " Intuitive backspacing
 set backspace=indent,eol,start
 
-" Menu for file paths when `:e` or `:b`
-set wildmenu
+" Append subdirectories
+set path+=**
 
 " Don't update screen during macro and script execution
 set lazyredraw
