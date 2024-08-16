@@ -181,7 +181,7 @@ nnoremap <down> <nop>
 " Print date
 nnoremap <leader>d :.!date<cr>
 
-au FileType html,vim,xhtml,xml inoremap < <lt>><ESC>i| inoremap > <c-r>=ClosePair('>')<CR>
+au FileType html,vim,xhtml,xml inoremap < <lt>><ESC>i| inoremap > >
 
 " }}}
 
@@ -205,5 +205,22 @@ augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
+
+" }}}
+
+" NETRW ---------------------------------------------------------------- {{{
+
+let g:netrw_banner=0
+let g:netrw_browse_split=4
+let g:netrw_altv=1
+let g:netrw_liststyle=3
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+
+" }}}
+
+" NETRW ---------------------------------------------------------------- {{{
+
+nnoremap <leader>scm :-1read $HOME/.vim/.skeleton.scm<CR>
 
 " }}}
