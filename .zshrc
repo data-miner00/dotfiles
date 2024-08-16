@@ -25,6 +25,9 @@ alias start='sudo pacman -Syu --noconfirm && startx'
 alias quote='curl https://api.quotable.io/random -s | jq  ".content" | cowsay | lolcat'
 alias :q='exit'
 alias fc='ls -l | wc -l'
+alias copy='xclip -sel clip'
+alias weather='curl wttr.in'
+alias myip='curl whatismyip.akamai.com'
 
 # Move all files and folders in the current directory to parent directory
 alias hoist='find . -maxdepth 1 -exec mv {} .. \;'
