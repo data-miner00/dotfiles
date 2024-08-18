@@ -90,6 +90,12 @@ set expandtab
 " Basically indenting a line with 'tabstop' configured
 set smarttab
 
+" Better code completion experience
+set completeopt=menuone,noselect
+
+" Decrease sequence completion time
+set timeoutlen=300
+
 " }}}
 
 " KEYMAPS ---------------------------------------------------------------- {{{
@@ -219,7 +225,7 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 " }}}
 
-" NETRW ---------------------------------------------------------------- {{{
+" SNIPPETS ---------------------------------------------------------------- {{{
 
 nnoremap <leader>scm :-1read $HOME/.vim/.skeleton.scm<CR>
 
