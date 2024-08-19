@@ -230,3 +230,10 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 nnoremap <leader>scm :-1read $HOME/.vim/.skeleton.scm<CR>
 
 " }}}
+
+" COMMANDS ---------------------------------------------------------------- {{{
+
+command! Vimrc e ~/.vimrc
+command! Zshrc e ~/.zshrc
+
+" }}}
