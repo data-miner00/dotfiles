@@ -235,5 +235,9 @@ nnoremap <leader>scm :-1read $HOME/.vim/.skeleton.scm<CR>
 
 command! Vimrc e ~/.vimrc
 command! Zshrc e ~/.zshrc
+command! Compilers e $VIMRUNTIME/compiler
+
+" Create current directory if not exist
+command! W !mkdir -p %:h
 
 " }}}

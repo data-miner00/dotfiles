@@ -22,12 +22,13 @@ alias nvconf='cd ~/.config/nvim'
 alias img='sxiv'
 alias tty='tty-clock -c -C 4'
 alias start='sudo pacman -Syu --noconfirm && startx'
-alias quote='curl https://api.quotable.io/random -s | jq  ".content" | cowsay | lolcat'
+alias quote='curl https://zenquotes.io/api/random -s | jq  ".[0] .q" | cowsay | lolcat'
 alias :q='exit'
 alias fc='ls -l | wc -l'
 alias copy='xclip -sel clip'
 alias weather='curl wttr.in'
-alias myip='curl whatismyip.akamai.com'
+alias ip='curl whatismyip.akamai.com'
+alias skyline='curl https://skyline.github.com'
 
 # Move all files and folders in the current directory to parent directory
 alias hoist='find . -maxdepth 1 -exec mv {} .. \;'
@@ -49,6 +50,13 @@ function colors() {
     done
 }
 
+# Reference: https://linuxize.com/post/bash-for-loop/
+function forloop() {
+    for element in Hydrogen Helium Lithium Beryllium
+    do
+        echo "Element: $element"
+    done
+}
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
