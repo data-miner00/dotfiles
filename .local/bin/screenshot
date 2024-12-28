@@ -1,4 +1,4 @@
-#! /bin/sh
+#!/bin/sh
 output="$HOME/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png"
 
 case "$1" in

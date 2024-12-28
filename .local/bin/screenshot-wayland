@@ -1,0 +1,10 @@
+#!/bin/sh
+output="+$HOME/Pictures/Screenshots/%Y-%m-%d-%T-screenshot.png"
+primary_monitor=eDP-1
+
+case "$1" in
+  "select") grim -g $(slurp) $(date $output) || exit ;;
+  "window") grim -o $primary_monitor $(date $output) || exit ;;
+  *) grim $(date $output) || exit ;;
+esac
+
