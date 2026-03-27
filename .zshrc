@@ -29,6 +29,7 @@ alias copy='xclip -sel clip'
 alias weather='curl wttr.in'
 alias ip='curl whatismyip.akamai.com'
 alias skyline='curl https://skyline.github.com'
+alias screen='xrandr --query'
 
 # Move all files and folders in the current directory to parent directory
 alias hoist='find . -maxdepth 1 -exec mv {} .. \;'
@@ -83,5 +84,6 @@ esac
 # pnpm end
 
 export PATH="$HOME/.nix-profile/bin:$PATH"
+export PATH="$HOME/.local/share/gem/ruby/3.4.0/bin:$PATH"
 
 neofetch
